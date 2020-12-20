@@ -5,6 +5,7 @@ class App {
   
   constructor () {
     this.game = new Game();
-    console.log('sdaasd');
+    this.game.start();
   }
 }
+const app = new App();
