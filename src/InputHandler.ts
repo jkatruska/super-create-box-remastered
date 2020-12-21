@@ -7,11 +7,14 @@ export default class InputHandler {
     this.game = game;
     document.addEventListener("keydown", (event) => {
       switch(event.keyCode) {
-        case 39:
-          this.game.player.moveRight();
-          break;
         case 37:
           this.game.player.moveLeft();
+          break;
+        case 38:
+          this.game.player.jump();
+          break;
+        case 39:
+          this.game.player.moveRight();
           break;
       }
     });

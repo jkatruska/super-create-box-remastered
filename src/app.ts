@@ -8,4 +8,4 @@ class App {
     this.game.start();
   }
 }
-const app = new App();
+new App();
