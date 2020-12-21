@@ -21,9 +21,15 @@ export default class InputHandler {
     
     document.addEventListener("keyup", (event) => {
       switch(event.keyCode) {
-        case 39:
         case 37:
-          this.game.player.stopMovement();
+          if (this.game.player.facingDirection === 'left') {
+            this.game.player.stopMovement();
+          }
+          break;
+        case 39:
+          if (this.game.player.facingDirection === 'right') {
+            this.game.player.stopMovement();
+          }
           break;
       }
     });

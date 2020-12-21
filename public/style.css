@@ -14,8 +14,4 @@
   height: 600px;
   border: 1px solid gray;
 }
-.right {
-  transform: scaleX(-1);
-  background: blue;
-}
 

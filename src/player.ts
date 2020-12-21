@@ -24,8 +24,8 @@ export default class Player implements Drawable, Movable {
     this.height = 64;
     this.width = 64;
     this.position = {
-        x: 30,
-        y: this.game.height - this.height - 20
+        x: 500,
+        y: this.game.height - this.height - 300
     }
     this.facingDirection = 'left';
     this.imageLoadedLeft = false;
@@ -56,6 +56,9 @@ export default class Player implements Drawable, Movable {
   }
 
   update(dt: number) {
+      if (this.verticalSpeed <= 0 && !this.isJumping) {
+          this.verticalSpeed = 5;
+      }
       this.position.x += this.speed;
       this.position.y += this.verticalSpeed;
       if (this.position.x <= 0) {
@@ -63,6 +66,9 @@ export default class Player implements Drawable, Movable {
       }
       if (this.position.x + this.width >= this.game.width) {
         this.position.x = this.game.width - this.width;
+      }
+      if (this.position.y + this.height > this.game.height) {
+        this.position.y = this.game.height - this.height;
       }
   }
   
