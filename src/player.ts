@@ -26,8 +26,8 @@ export default class Player implements Drawable, Movable {
     this.height = 64;
     this.width = 64;
     this.position = {
-        x: 400,
-        y: this.game.height - this.height - 400
+        x: 468,
+        y: 386
     }
     this.facingDirection = 'left';
     this.imageLoadedLeft = false;

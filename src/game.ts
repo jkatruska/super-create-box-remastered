@@ -24,7 +24,6 @@ export default class Game {
     this.player = new Player(this);
     this.player.draw();
     this.platforms = this.generatePlatforms();
-    console.log(this.platforms);
     //player should be last, because of clipping
     this.renderObjects.push(...this.platforms, this.player);
     new InputHandler(this);
